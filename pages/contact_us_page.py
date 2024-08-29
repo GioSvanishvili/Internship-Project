@@ -12,6 +12,7 @@ class ContactUsPage(Page):
     CONNECT_THE_COMPANY_BTN = (By.CSS_SELECTOR, ".button-link-menu._1")
 
     def verify_contact_us_opened(self):
+        sleep(2)
         self.verify_url(self.CONTACT_US_URL)
 
     def verify_social_4_icons(self):

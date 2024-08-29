@@ -10,5 +10,6 @@ class SettingsPage(Page):
     CONTACT_US_BTN = (By.CSS_SELECTOR, "[href='/contact-us'].page-setting-block")
 
     def click_contact_us(self):
+        sleep(3)
         self.click(*self.CONTACT_US_BTN)
 
