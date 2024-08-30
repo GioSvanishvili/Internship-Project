@@ -16,7 +16,9 @@ class ContactUsPage(Page):
         self.verify_url(self.CONTACT_US_URL)
 
     def verify_social_4_icons(self):
-        self.find_elements(*self.SOCIAL_ICONS)
+        expected_number_of_icons = 5
+        actual_number_of_icons = self.find_elements(*self.SOCIAL_ICONS)
+        assert len(actual_number_of_icons) == expected_number_of_icons, f'Expected {expected_number_of_icons} icons, but got {len(actual_number_of_icons)}'
 
     def verify_connect_the_company_btn(self):
         self.verify_text('Connect the company', *self.CONNECT_THE_COMPANY_BTN)
