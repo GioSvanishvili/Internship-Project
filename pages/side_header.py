@@ -10,6 +10,7 @@ class SideHeader(Page):
     SETTINGS_BTN = (By.CSS_SELECTOR, "[href='/settings'].menu-button-block")
 
     def click_settings(self):
+        sleep(3)
         self.wait_and_click(self.SETTINGS_BTN)
 
     
