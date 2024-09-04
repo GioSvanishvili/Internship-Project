@@ -14,9 +14,9 @@ def browser_init(context, scenario_name):
     :param context: Behave context
     """
 
-    # driver_path = './chromedriver.exe'
-    # service = Service(driver_path)
-    # context.driver = webdriver.Chrome(service=service)
+    driver_path = ChromeDriverManager().install()
+    service = Service(driver_path)
+    context.driver = webdriver.Chrome(service=service)
 
     # driver_path = GeckoDriverManager().install()
     # service = Service(driver_path)
@@ -30,23 +30,23 @@ def browser_init(context, scenario_name):
     #     service=service
     # )
 
-    bs_user = 'giorgi_dczfAo'
-    bs_key = 'FsZ1JqPSRisq9Cnijzsi'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    # bs_user = 'giorgi_dczfAo'
+    # bs_key = 'FsZ1JqPSRisq9Cnijzsi'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # options = Options()
+    # bstack_options = {
+    #     "os": "OS X",
+    #     "osVersion": "Ventura",
+    #     'browserName': 'Safari',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
+    #
+    # context.driver.set_window_size(1920, 1080)  # for only headless mode and browserstack
 
-    options = Options()
-    bstack_options = {
-        "os": "OS X",
-        "osVersion": "Ventura",
-        'browserName': 'Safari',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
-
-    context.driver.set_window_size(1920, 1080)  # for only headless mode and browserstack
-
-    # context.driver.maximize_window()
+    context.driver.maximize_window()
 
     context.driver.implicitly_wait(4)
     context.driver.wait = WebDriverWait(context.driver, 15)
