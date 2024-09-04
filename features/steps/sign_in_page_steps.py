@@ -8,7 +8,7 @@ from time import sleep
 
 @when('Log in to the page')
 def log_in(context):
-    context.app.sign_in_page.type_email('gsvanishvili7@gmail.com')
-    context.app.sign_in_page.type_password('Zuragioana27175')
+    context.app.sign_in_page.type_email('**************')
+    context.app.sign_in_page.type_password('**********')
     context.app.sign_in_page.log_in_button()
 
