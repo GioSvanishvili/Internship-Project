@@ -11,3 +11,8 @@ def open_reelly(context):
     context.app.main_page.open()
 
 
+@when('Click on User Icon')
+def click_on_user_icon(context):
+    context.app.main_page.click_user_icon()
+
+

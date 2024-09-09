@@ -8,9 +8,13 @@ from time import sleep
 class SideHeader(Page):
 
     SETTINGS_BTN = (By.CSS_SELECTOR, "[href='/settings'].menu-button-block")
+    CLICK_MAIN_MENU_BUTTON = (By.CSS_SELECTOR, ".circle-gradient")
 
-    def click_settings(self):
+    # def click_settings(self):
+    #     sleep(3)
+    #     self.wait_and_click(self.SETTINGS_BTN)
+
+    def click_main_menu(self):
         sleep(3)
-        self.wait_and_click(self.SETTINGS_BTN)
+        self.wait_and_click(self.CLICK_MAIN_MENU_BUTTON)
 
-    

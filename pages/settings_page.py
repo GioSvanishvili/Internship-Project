@@ -11,5 +11,7 @@ class SettingsPage(Page):
 
     def click_contact_us(self):
         sleep(3)
+        self.driver.execute_script("window.scrollBy(0, 500);")
+        sleep(2)
         self.click(*self.CONTACT_US_BTN)
 
