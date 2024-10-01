@@ -9,3 +9,8 @@ from time import sleep
 @when('Click on Contact us option')
 def click_contact_us(context):
     context.app.settings_page.click_contact_us()
+
+
+@when('Click on Change password button')
+def click_change_password(context):
+    context.app.settings_page.click_change_password()

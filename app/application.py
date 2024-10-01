@@ -4,6 +4,7 @@ from pages.side_header import SideHeader
 from pages.main_page import MainPage
 from pages.settings_page import SettingsPage
 from pages.contact_us_page import ContactUsPage
+from pages.change_password_page import ChangePasswordPage
 
 
 class Application:
@@ -16,4 +17,4 @@ class Application:
         self.main_page = MainPage(driver)
         self.settings_page = SettingsPage(driver)
         self.contact_us_page = ContactUsPage(driver)
-
+        self.change_password_page = ChangePasswordPage(driver)

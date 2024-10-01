@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from time import sleep
 
 
-@then('Verify the right page opens')
+@then('Verify that contact us page opens')
 def verify_contact_us_opened(context):
     context.app.contact_us_page.verify_contact_us_opened()
 

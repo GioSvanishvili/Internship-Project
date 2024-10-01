@@ -6,6 +6,6 @@ Feature: Contact Us page
     And Click on Main Menu button
     And Click on User Icon
     And Click on Contact us option
-    Then Verify the right page opens
+    Then Verify that contact us page opens
     And Verify there are at least 4 social media icons
     And Verify 'connect the company' button is available and clickable
